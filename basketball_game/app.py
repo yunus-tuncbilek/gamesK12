@@ -89,6 +89,10 @@ def get_optimal_speed():
 def speed_formula(line_location):
     return 20 + line_location ** (1/2)
 def inverse_speed_formula(speed):
+    # if speed is under 20, line location cannot exist, 
+    # so we return -25 to signal that it's impossible to make the shot from there
+    if speed < 20:
+        return -25
     return (speed - 20) ** 2
 
 # updates the location of the green bar which signals the optimal speed
@@ -99,6 +103,8 @@ def update_green_bar():
 
     desired_location = -power_bar.shapesize()[0] * DEFAULT_SQUARE_SIDE / 2
     desired_location += inverse_speed_formula(optimal_speed)
+
+    print(optimal_speed, desired_location)
 
     green_bar.goto(green_bar.xcor(), desired_location)
 
