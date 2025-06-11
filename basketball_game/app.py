@@ -120,6 +120,7 @@ line.color('blue')
 line.shapesize(stretch_wid=0.25, stretch_len=1)
 line.penup()
 line.goto(-250, 0)
+line.speed(10)
 
 # get the line's location on the power_bar object 
 # the possible locations are from 0 to the height of power bar
