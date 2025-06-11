@@ -26,12 +26,14 @@ for guessesTaken in ...:
         print('Your guess is too high.')
 
     if guess == number:
-        break
+        # Exercise 4: What should we do if the guess is correct? Fill in below.
+        # This is not the place where we print the final line. Look at Exercise 5 for details.
+        ...
 
 if guess == number:
     guessesTaken = str(guessesTaken + 1)
     
-    # Exercise 4: Change the line below to print "Good job, you got it right in <number of user's guesses>."
+    # Exercise 5: Change the line below to print "Good job, you got it right in <number of user's guesses>."
     print(...)
 
 if guess != number:
